@@ -6,7 +6,7 @@ sqlext use to extend [gorm](https://github.com/jinzhu/gorm) and [gocql](https://
 - gocql not support bind querying data to struct，`MapToStruct` fill struct fields with map value
 
 
-##example
+## example
 
 - BatchInsert  
 
@@ -23,7 +23,7 @@ var mydb *gorm.DB
 var members = []GroupMember{}
 sqlext.BatchInsert(mydb.DB(),members)
 
-//生成的SQL: INSERT INTO group_member (id, group_id, type, extra, join_time) VALUES (?,?,?,?,?), (?,?,?,?,?) ...
+//generated SQL: INSERT INTO group_member (id, group_id, type, extra, join_time) VALUES (?,?,?,?,?), (?,?,?,?,?) ...
 ```
 
 - MapToStruct
